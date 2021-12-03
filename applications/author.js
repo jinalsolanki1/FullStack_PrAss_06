@@ -6,6 +6,8 @@ app.use(express.json());
 const mongoose=require("mongoose");
 const authorModel = require("../models/author");
 const studModel=require("../models/author");
+//send msg
+app.get("/", (req,res) => res.send("API Of Author"));
 
 //MongoDB connection String
 mongoose.connect(process.env.mongourl)

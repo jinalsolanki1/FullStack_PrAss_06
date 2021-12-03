@@ -5,6 +5,7 @@ app.use(express.json());
 
 const mongoose=require("mongoose");
 const studModel=require("../models/student");
+app.get("/", (req,res) => res.send("API Of Student"));
 
 //MongoDB connection String
 mongoose.connect(process.env.mongourl)

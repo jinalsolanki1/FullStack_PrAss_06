@@ -6,7 +6,7 @@ app.use(express.json());
 const mongoose=require("mongoose");
 const bookModel = require("../models/book");
 const studModel=require("../models/book");
-
+app.get("/", (req,res) => res.send("API Of Book"));
 //MongoDB connection String
 mongoose.connect(process.env.mongourl)
 .then(() => console.log("MongoDB Connected."));

@@ -7,7 +7,7 @@ const mongoose=require("mongoose");
 const bookModel = require("../models/book");
 const borrowModel = require("../models/borrow");
 const studModel=require("../models/borrow");
-
+app.get("/", (req,res) => res.send("API Of Borrow"));
 //MongoDB connection String
 mongoose.connect(process.env.mongourl)
 .then(() => console.log("MongoDB Connected."));
