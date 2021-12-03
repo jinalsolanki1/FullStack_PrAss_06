@@ -1,6 +1,6 @@
 const express=require('express');
 const app=express();
-const port = 5000;
+//const port = 5000;
 
 const appStudent = require("./applications/student");
 const appBorrow = require("./applications/borrow");
@@ -13,4 +13,4 @@ app.use("/book",appBook);
 app.use("/author",appAuthor);
 
 app.get("/", (req,res) => res.send("Hello"));
-app.listen(port , () => console.log("On Port 5000"));
+app.listen(process.env.PORT || 5000);
